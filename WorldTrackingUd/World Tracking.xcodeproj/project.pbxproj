@@ -14,6 +14,7 @@
 		CDB93DE521C3F8B5009A8313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB93DE321C3F8B5009A8313 /* LaunchScreen.storyboard */; };
 		CDB93DF021C3F8B5009A8313 /* World_TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB93DEF21C3F8B5009A8313 /* World_TrackingTests.swift */; };
 		CDB93DFB21C3F8B5009A8313 /* World_TrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB93DFA21C3F8B5009A8313 /* World_TrackingUITests.swift */; };
+		CDB93E0921C43371009A8313 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB93E0821C43371009A8313 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CDB93DF621C3F8B5009A8313 /* World TrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World TrackingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB93DFA21C3F8B5009A8313 /* World_TrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_TrackingUITests.swift; sourceTree = "<group>"; };
 		CDB93DFC21C3F8B5009A8313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB93E0821C43371009A8313 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CDB93DE121C3F8B5009A8313 /* Assets.xcassets */,
 				CDB93DE321C3F8B5009A8313 /* LaunchScreen.storyboard */,
 				CDB93DE621C3F8B5009A8313 /* Info.plist */,
+				CDB93E0821C43371009A8313 /* Utils.swift */,
 			);
 			path = "World Tracking";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				CDB93DDD21C3F8B4009A8313 /* ViewController.swift in Sources */,
 				CDB93DDB21C3F8B4009A8313 /* AppDelegate.swift in Sources */,
+				CDB93E0921C43371009A8313 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
