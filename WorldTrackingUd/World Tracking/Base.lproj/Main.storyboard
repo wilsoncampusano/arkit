@@ -23,6 +23,7 @@
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jus-Mp-Aw1">
                                 <rect key="frame" x="20" y="567" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.20894708679999999" green="0.21101586980000001" blue="0.21101586980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="d85-Tg-EOW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="e4k-sF-Ofv"/>
@@ -32,15 +33,29 @@
                                     <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXr-4q-Eyu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEG-99-NTX">
+                                <rect key="frame" x="275" y="567" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ReC-Mo-ivt"/>
+                                    <constraint firstAttribute="height" constant="80" id="nBG-9J-4gm"/>
+                                </constraints>
+                                <state key="normal" title="Reiniciar"/>
+                                <connections>
+                                    <action selector="reiniciar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WR5-hY-Nsz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Z1-TH-auj"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K7H-iR-3jA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dEG-99-NTX" secondAttribute="bottom" constant="20" id="YGF-sc-v54"/>
                             <constraint firstItem="Jus-Mp-Aw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aA8-lD-au7"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bQS-jQ-6y9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jus-Mp-Aw1" secondAttribute="bottom" constant="20" id="f5j-lb-QKb"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fG6-oS-kab"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEG-99-NTX" secondAttribute="trailing" constant="20" id="qld-ub-pD7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
