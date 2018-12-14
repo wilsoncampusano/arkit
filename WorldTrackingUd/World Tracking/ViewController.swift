@@ -16,14 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scenView.debugOptions = [.showWorldOrigin, .showCameras, .showFeaturePoints]
-        scenView.autoenablesDefaultLighting = true 
+        scenView.autoenablesDefaultLighting = true
         scenView.session.run(config)
     }
     @IBAction func add(_ sender: UIButton) {
         let node = SCNNode()
-        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        let cilinderWithCode = SCNCone(topRadius: 0.3, bottomRadius: 0.3, height: 0.5)
+        
+        
+        //node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        node.geometry = cilinderWithCode
         node.geometry?.firstMaterial?.specular.contents = UIColor.orange
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.black
+        
         let x = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
         let y = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
         let z = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
