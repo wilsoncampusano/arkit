@@ -21,12 +21,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEc-D3-wnr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jus-Mp-Aw1">
+                                <rect key="frame" x="20" y="567" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="d85-Tg-EOW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="e4k-sF-Ofv"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXr-4q-Eyu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Z1-TH-auj"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K7H-iR-3jA"/>
+                            <constraint firstItem="Jus-Mp-Aw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aA8-lD-au7"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bQS-jQ-6y9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jus-Mp-Aw1" secondAttribute="bottom" constant="20" id="f5j-lb-QKb"/>
                             <constraint firstItem="NEc-D3-wnr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fG6-oS-kab"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
