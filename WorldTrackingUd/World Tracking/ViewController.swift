@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         _ = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
         _ = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
         _ = Util.randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        node.position = SCNVector3(0,0,-0.5)
+        node.position = SCNVector3(0,0,-0.1)
         self.scenView.scene.rootNode.addChildNode(node)
     }
     @IBAction func reiniciar(_ sender: Any) {
