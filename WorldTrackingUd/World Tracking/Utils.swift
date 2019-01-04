@@ -15,3 +15,9 @@ class Util{
         min(firstNum, secondNum)
     }
 }
+
+extension Int {
+    var radians:Double {
+        return Double(self) * .pi/180
+    }
+}
