@@ -9,7 +9,7 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
@@ -19,8 +19,12 @@ class ViewController: UIViewController {
         
         self.sceneView.debugOptions = [.showWorldOrigin, .showFeaturePoints]
         self.sceneView.showsStatistics = true
-        
+        self.sceneView.delegate = self 
         self.sceneView.session.run(configuration)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        print("rendering")
     }
 }
 
