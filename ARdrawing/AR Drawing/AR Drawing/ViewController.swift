@@ -52,7 +52,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     }
                 }
                 
-                let pointerNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2))
+                let pointerNode = SCNNode(geometry: SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0.01/2))
                 pointerNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
                 pointerNode.position = frontOfCamera
                 rootNode.addChildNode(pointerNode)
