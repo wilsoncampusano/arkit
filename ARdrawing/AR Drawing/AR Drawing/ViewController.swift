@@ -47,10 +47,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }else {
                 
                 rootNode.enumerateChildNodes { (node, _) in
-                    node.removeFromParentNode()
+                    if node.geometry is SCNBox{
+                        node.removeFromParentNode()
+                    }
                 }
                 
-                let pointerNode = SCNNode(geometry: SCNSphere(radius: 0.1))
+                let pointerNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2))
                 pointerNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
                 pointerNode.position = frontOfCamera
                 rootNode.addChildNode(pointerNode)
