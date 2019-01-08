@@ -29,13 +29,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let transformation = pointOfView.transform
         
-        let position = SCNVector3(-transformation.m31, -transformation.m32, -transformation.m33)
+        let orientation = SCNVector3(-transformation.m31, -transformation.m32, -transformation.m33)
         
-        let orientation = SCNVector3(transformation.m41, transformation.m42, transformation.m43)
+        let location = SCNVector3(transformation.m41, transformation.m42, transformation.m43)
         
-        let frontOfCamera = orientation + position
+        let frontOfCamera = orientation + location
         
-        print("x = \(position.x) y = \(position.y) z =  \(position.z)")
+        print("x = \(orientation.x) y = \(orientation.y) z =  \(orientation.z)")
         
     }
     
