@@ -39,6 +39,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
    
         if draw.isHighlighted {
             print("Dibujar pisado")
+            let sphereNode = SCNNode(geometry: SCNSphere(radius: 0.02))
+            sphereNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+            sphereNode.position = frontOfCamera
+            self.sceneView.scene.rootNode.addChildNode(sphereNode)
+        }else {
+            let pointerNode = SCNNode(geometry: SCNSphere(radius: 0.1))
+            pointerNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+            pointerNode.position = frontOfCamera
+            self.sceneView.scene.rootNode.addChildNode(pointerNode)
         }
     }
     

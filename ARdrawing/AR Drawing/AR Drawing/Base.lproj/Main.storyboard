@@ -21,18 +21,20 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfT-bh-QNZ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHR-p7-VW0">
-                                <rect key="frame" x="164" y="622" width="46" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHR-p7-VW0">
+                                <rect key="frame" x="155" y="617" width="65" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="MH8-KO-zm7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="MH8-KO-zm7"/>
                                     <constraint firstAttribute="height" constant="25" id="eny-Fd-M3Y"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Dibujar"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pHR-p7-VW0" secondAttribute="bottom" constant="20" id="HEV-Mg-RO6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pHR-p7-VW0" secondAttribute="bottom" constant="25" id="HEV-Mg-RO6"/>
+                            <constraint firstItem="pHR-p7-VW0" firstAttribute="centerX" secondItem="hfT-bh-QNZ" secondAttribute="centerX" id="IsU-hw-DHE"/>
                             <constraint firstItem="hfT-bh-QNZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J8g-jL-R1r"/>
                             <constraint firstItem="hfT-bh-QNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MKH-ZV-xlA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hfT-bh-QNZ" secondAttribute="bottom" id="QUY-7D-j7D"/>
