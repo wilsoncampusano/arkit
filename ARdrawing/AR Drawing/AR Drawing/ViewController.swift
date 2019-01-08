@@ -35,19 +35,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transformation.m41, transformation.m42, transformation.m43)
         
         let frontOfCamera = orientation + location
-        
+        let rootNode = self.sceneView.scene.rootNode
    
-        if draw.isHighlighted {
-            print("Dibujar pisado")
-            let sphereNode = SCNNode(geometry: SCNSphere(radius: 0.02))
-            sphereNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-            sphereNode.position = frontOfCamera
-            self.sceneView.scene.rootNode.addChildNode(sphereNode)
-        }else {
-            let pointerNode = SCNNode(geometry: SCNSphere(radius: 0.1))
-            pointerNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-            pointerNode.position = frontOfCamera
-            self.sceneView.scene.rootNode.addChildNode(pointerNode)
+        DispatchQueue.main.async {
+            if self.draw.isHighlighted {
+                print("Dibujar pisado")
+                let sphereNode = SCNNode(geometry: SCNSphere(radius: 0.02))
+                sphereNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                sphereNode.position = frontOfCamera
+                rootNode.addChildNode(sphereNode)
+            }else {
+                
+                rootNode.enumerateChildNodes { (node, _) in
+                    node.removeFromParentNode()
+                }
+                
+                let pointerNode = SCNNode(geometry: SCNSphere(radius: 0.1))
+                pointerNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                pointerNode.position = frontOfCamera
+                rootNode.addChildNode(pointerNode)
+            }
         }
     }
     
