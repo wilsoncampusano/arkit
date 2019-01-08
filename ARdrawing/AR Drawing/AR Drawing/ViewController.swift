@@ -11,6 +11,7 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var draw: UIButton!
     
     let configuration = ARWorldTrackingConfiguration()
     
@@ -24,7 +25,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
-        print("rendering")
+
         guard let pointOfView = renderer.pointOfView else {return }
         
         let transformation = pointOfView.transform
@@ -35,8 +36,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let frontOfCamera = orientation + location
         
-        print("x = \(orientation.x) y = \(orientation.y) z =  \(orientation.z)")
-        
+   
+        if draw.isHighlighted {
+            print("Dibujar pisado")
+        }
     }
     
 }
