@@ -25,13 +25,14 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let earthNode = SCNNode(geometry: SCNSphere(radius: 0.6))
+        let earthNode = SCNNode(geometry: SCNSphere(radius: 1))
         let rootNode = self.sceneView.scene.rootNode
         let earthFirstMaterial = earthNode.geometry?.firstMaterial
         
         earthFirstMaterial?.diffuse.contents = UIImage(named: "Earth Day")
         earthFirstMaterial?.specular.contents = UIImage(named: "Earth Especular")
         earthFirstMaterial?.emission.contents = UIImage(named: "Earth Emision")
+        earthFirstMaterial?.normal.contents = UIImage(named: "Earth Normal")
     
         
         earthNode.position = SCNVector3(0,0,-3)
