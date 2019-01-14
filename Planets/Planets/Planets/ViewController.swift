@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         earthFirstMaterial?.diffuse.contents = UIImage(named: "Earth Day")
         earthFirstMaterial?.specular.contents = UIImage(named: "Earth Especular")
+        earthFirstMaterial?.emission.contents = UIImage(named: "Earth Emision")
     
         
         earthNode.position = SCNVector3(0,0,-3)
